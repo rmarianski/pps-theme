@@ -32,20 +32,20 @@
 				<input type="hidden" name="form_id" id="form_id" value="<?php echo $id?>">
 			</div>
 			<div class="report_left">
-                 <div class="report_row">
-					<h4><?php echo Kohana::lang('ui_main.reports_location_name'); ?><br /><span class="example"><?php echo Kohana::lang('ui_main.detailed_location_example'); ?></span></h4>
-					<?php print form::input('location_name', $form['location_name'], ' class="text long"'); ?>
-				</div>
+                 
 				<div class="report_row">
 					<h3><?php echo Kohana::lang('ui_main.reports_title'); ?></h3>
                     
-					<?php print form::textarea('incident_title', $form['incident_title'], ' rows="4" class="textarea long" placeholder="...short-term, low-cost, long-term, partnerships, all ideas welcome"'); ?>
+					<?php print form::textarea('incident_title', $form['incident_title'], ' rows="4" class="textarea long" placeholder="...Need inspiration? Click on Browse Project Ideas to see what other people have suggested..."'); ?>
 				</div>
 				<div class="report_row">
 					<h4><?php echo Kohana::lang('ui_main.reports_description'); ?></h4>
 					<?php print form::textarea('incident_description', $form['incident_description'], ' rows="4" class="textarea long"  ') ?>
 				</div>
-               
+               <div class="report_row">
+					<h4><?php echo Kohana::lang('ui_main.reports_location_name'); ?><br /><span class="example"><?php echo Kohana::lang('ui_main.detailed_location_example'); ?></span></h4>
+					<?php print form::input('location_name', $form['location_name'], ' class="text long"'); ?>
+				</div>
 				<div class="report_row" style="display:none" id="datetime_default">
 					<h4><a href="#" id="date_toggle" class="show-more"><?php echo Kohana::lang('ui_main.modify_date'); ?></a><?php echo Kohana::lang('ui_main.date_time'); ?>: 
 						<?php echo Kohana::lang('ui_main.today_at')." "."<span id='current_time'>".$form['incident_hour']
@@ -199,7 +199,7 @@ foreach ($categories as $category)
 				<div class="report_row">
                 <h4>Map It</h4>
               	  	<div class="report-find-location">
-							<p>Click anywhere on map to place marker.</p> <p> Click and drag map to move map. </p><p> Use <img src="http://pps.org/placemap/denver/themes/pps/images/plus.gif" / align="absmiddle" style="padding:2px;"> and <img src="http://pps.org/placemap/denver/themes/pps/images/minus.gif"  align="absmiddle" style="padding:2px;"/> icons to zoom map.</p><br /><p>If your idea is for a system wide San Antonio condition, please select one representative site.</p>
+							<p>Click and drag the red marker to place it where you want.</p> <p>Click and drag map to move map. </p><p> Use <img src="http://pps.org/placemap/denver/themes/pps/images/plus.gif" / align="absmiddle" style="padding:2px;"> and <img src="http://pps.org/placemap/denver/themes/pps/images/minus.gif"  align="absmiddle" style="padding:2px;"/> icons to zoom map.</p><br /><p>If your idea is for an area, please select one example place.</p><p>Project ideas must be within the district area outlined.</p>
                    	</div>
 					<div id="divMap" class="report_map"></div>
                     <div style="clear:both;" id="find_text"><?php echo Kohana::lang('ui_main.pinpoint_location'); ?>.</div>
@@ -209,12 +209,18 @@ foreach ($categories as $category)
 						<?php print form::input('location_find', '', ' title="'.Kohana::lang('ui_main.location_example').'" class="findtext"'); ?>
 						<div style="float:left;margin:9px 0 0 5px;"><input type="button" name="button" id="button" value="<?php echo Kohana::lang('ui_main.find_location'); ?>" class="btn_find" /></div>
 						<div id="find_loading" class="report-find-loading"></div>
-						
+					
 				</div>
                 
+                <div class="report_row">
+						<h4><?php echo Kohana::lang('ui_main.reports_email'); ?><br />
+                        <span class="example">This will not be shown publicly
+                                                  <?php // echo Kohana::lang('ui_main.reports_email_privacy'); ?>
+</span></h4>
+						<?php print form::input('person_email', $form['person_email'], ' class="text long"'); ?>
+					</div>
                 
-                
-                
+              
                 
                 
 
@@ -352,13 +358,7 @@ foreach ($categories as $category)
                                                   <?php print form::input('person_neighborhood', $form['person_neighborhood'], ' class="text long"'); ?>
                                         </div>
                                         <?php endif; ?>
-					<div class="report_row">
-						<h4><?php echo Kohana::lang('ui_main.reports_email'); ?><br />
-                        <span class="example">
-                                                  <?php // echo Kohana::lang('ui_main.reports_email_privacy'); ?>
-</span></h4>
-						<?php print form::input('person_email', $form['person_email'], ' class="text long"'); ?>
-					</div>
+					
 					<?php
 					// Action::report_form_optional - Runs in the optional information of the report form
 					Event::run('ushahidi_action.report_form_optional');
@@ -371,10 +371,14 @@ foreach ($categories as $category)
 				</div>
 			</div>
 			<div class="report_right sidebar-copy">
-                          <h5>Add your ideas to improve downtown San Antonio's places now through July!</h5>
-                          <h5>The Power of Ten:  A great place typically has at least 10 things to do in it; a great downtown has at least 10 great places.</h5>
-                          <h5>Tell us which downtown places matter most to you - the best, the worst, and the places that have the greatest opportunity. Tell us your ideas to improve them. Add as many places as you can. The results will add up to an agreement on the places we need to focus on.</h5>
-                          <h5>Share ideas. Browse ideas. Comment. Tell your friends. Let's Re-Imagine the Heart of San Antonio.</h5>
+                         <br /><br /><br /><br /><br /><br /><br /><br />
+                          <h5>Participatory budgeting is a new and different way to make decisions about publicly funded projects in your neighborhood.</h5>
+                          <h5>Community members - like you - decide how to spend part of the public budget in your City Council district.</h5>
+                          <h5>Over $1 million is available for 
+<a class="photothumb" rel="lightbox-group1" href="/placemap/pbnyc/themes/pps/images/pbnyc_eligible-projects.jpg">"capital"</a> projects for your 
+district!</h5>
+                          <h5>Read more at <a href="http://pbnyc.org">PBNYC.org</a></h5><br /><br /><a class="photothumb" rel="lightbox-group1" href="/placemap/pbnyc/themes/pps/images/pbnyc_eligible-projects.jpg" target="_blank"><img style="border:2px #95CF1A solid; border-radius: 4px;" width="225px" src="/placemap/pbnyc/themes/pps/images/pbnyc_eligible-projects.jpg"/></a><br /><br />
+<img src="/placemap/pbnyc/themes/pps/images/pb-graphic.png" />
 			</div>
 		</div>
 		<?php print form::close(); ?>
