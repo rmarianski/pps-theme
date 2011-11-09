@@ -1839,6 +1839,10 @@ border: 0px #333 solid;
 	width: 550px;
 }
 
+#likert-questions li {
+margin: 0.5em 0;
+}
+
 /*---New Reports Styles CB:10.14.10 ---*/
 
 /* Reports View */

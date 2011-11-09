@@ -1,5 +1,35 @@
+<?php
 
+function likert_radio_group($name, $responses) {
+  $group = array();
+  foreach ($responses as $response) {
+    $group[] = '<input type="radio" name="' . $name . '" value="' . $response->id . '" />' .
+      $response->response . '<br />';
+  }
+  return implode('', $group);
+}
 
+function likert_question($question_label, $question_form_name, $responses) {
+  return '<li>' .
+    '<p>' . $question_label . '</p>' .
+    likert_radio_group($question_form_name, $responses) .
+    '</li>';
+}
+
+function likert_questions($questions, $responses) {
+  // function that displays all likert questions
+  $markup = array();
+  $markup[] = '<ol>';
+  foreach ($questions as $question) {
+    $label = $question->question;
+    $name = 'likert_question_' . $question->id;
+    $markup[] = likert_question($label, $name, $responses);
+  }
+  $markup[] = '</ol>';
+  return implode('', $markup);
+}
+
+?>
 
 <div id="content">
 	<div class="content-bg">
@@ -73,6 +103,10 @@ foreach ($categories as $category)
 </ul>
 					</div>
 				</div>
+<div class="report_row" id="likert-questions">
+<h4>Rating Assessment</h4>
+<?php echo likert_questions($likert_questions, $likert_responses); ?>
+</div>
 				<?php
 				
 				// Action::report_form - Runs right after the report categories
