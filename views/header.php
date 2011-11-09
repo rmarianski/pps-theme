@@ -84,7 +84,8 @@
 
 				<!-- mainmenu -->
 				<div id="mainmenu" class="clearingfix">
-					<ul><h1><?php nav::main_tabs($this_page); ?></h1></ul>
+   <?php $dontshow = array('contact'); ?>
+                        <ul><h1><?php nav::main_tabs($this_page, $dontshow); ?></h1></ul>
                     
 
 				</div>
