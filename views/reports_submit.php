@@ -32,20 +32,62 @@
 				<input type="hidden" name="form_id" id="form_id" value="<?php echo $id?>">
 			</div>
 			<div class="report_left">
-                 
-				<div class="report_row">
-					<h3><?php echo Kohana::lang('ui_main.reports_title'); ?></h3>
-                    
-					<?php print form::textarea('incident_title', $form['incident_title'], ' rows="4" class="textarea long" placeholder="...Need inspiration? Click on Browse Project Ideas to see what other people have suggested..."'); ?>
+                 <div class="report_row">
+					<h4><?php echo Kohana::lang('ui_main.reports_location_name'); ?><br /><span class="example"><?php echo Kohana::lang('ui_main.detailed_location_example'); ?> </span></h4>
+					<?php print form::input('location_name', $form['location_name'], ' class="text long"'); ?>
+				</div>
+                  <div class="report_row">
+					<h4><?php echo Kohana::lang('ui_main.reports_categories'); ?><br /><span class="example">
+                                          <?php //echo Kohana::lang('ui_main.reports_categories_subtext'); ?>
+</span></h4>
+					<div class="report_category" id="categories">
+						<?php
+						$selected_categories = array();
+                if (!empty($form['incident_category']) && is_array($form['incident_category'])) {
+							$selected_categories = $form['incident_category'];
+						}
+?>
+<ul>
+<?php
+ /*
+$user_categories = Kohana::config('pps.user_categories');
+foreach ($categories as $category)
+{
+  if (in_array($category->category_title, $user_categories))
+  {
+    foreach ($category->children as $child)
+    {
+      echo '<li>'.category::display_category_checkbox($child, $selected_categories, 'incident_category').'</li>';
+    }
+  }
+}
+ */
+ // we display all categories
+foreach ($categories as $category)
+{
+  if ($category->category_visible) {
+    echo '<li>'.category::display_category_checkbox($category, $selected_categories, 'incident_category').'</li>';
+  }
+}
+?>
+</ul>
+					</div>
+				</div>
+				<?php
+				
+				// Action::report_form - Runs right after the report categories
+				Event::run('ushahidi_action.report_form');
+				?>
+				<div class="report_row" >
+					<h4 style="font-size:30px"><?php echo Kohana::lang('ui_main.reports_title'); ?>
+                   </h4>
+					<?php print form::textarea('incident_title', $form['incident_title'], ' rows="4" class="textarea long" placeholder="My idea for an opportunity to make this better..."'); ?>
 				</div>
 				<div class="report_row">
 					<h4><?php echo Kohana::lang('ui_main.reports_description'); ?></h4>
-					<?php print form::textarea('incident_description', $form['incident_description'], ' rows="4" class="textarea long"  ') ?>
+					<?php print form::textarea('incident_description', $form['incident_description'], ' rows="4" class="textarea long" placeholder="...explain why your idea is good for people..."  ') ?>
 				</div>
-               <div class="report_row">
-					<h4><?php echo Kohana::lang('ui_main.reports_location_name'); ?><br /><span class="example"><?php echo Kohana::lang('ui_main.detailed_location_example'); ?></span></h4>
-					<?php print form::input('location_name', $form['location_name'], ' class="text long"'); ?>
-				</div>
+               
 				<div class="report_row" style="display:none" id="datetime_default">
 					<h4><a href="#" id="date_toggle" class="show-more"><?php echo Kohana::lang('ui_main.modify_date'); ?></a><?php echo Kohana::lang('ui_main.date_time'); ?>: 
 						<?php echo Kohana::lang('ui_main.today_at')." "."<span id='current_time'>".$form['incident_hour']
@@ -140,48 +182,7 @@
                             </div>
                            
                 
-                <div class="report_row">
-					<h4><?php echo Kohana::lang('ui_main.reports_categories'); ?><br /><span class="example">
-                                          <?php //echo Kohana::lang('ui_main.reports_categories_subtext'); ?>
-</span></h4>
-					<div class="report_category" id="categories">
-						<?php
-						$selected_categories = array();
-                if (!empty($form['incident_category']) && is_array($form['incident_category'])) {
-							$selected_categories = $form['incident_category'];
-						}
-?>
-<ul>
-<?php
- /*
-$user_categories = Kohana::config('pps.user_categories');
-foreach ($categories as $category)
-{
-  if (in_array($category->category_title, $user_categories))
-  {
-    foreach ($category->children as $child)
-    {
-      echo '<li>'.category::display_category_checkbox($child, $selected_categories, 'incident_category').'</li>';
-    }
-  }
-}
- */
- // we display all categories
-foreach ($categories as $category)
-{
-  if ($category->category_visible) {
-    echo '<li>'.category::display_category_checkbox($category, $selected_categories, 'incident_category').'</li>';
-  }
-}
-?>
-</ul>
-					</div>
-				</div>
-				<?php
-				
-				// Action::report_form - Runs right after the report categories
-				Event::run('ushahidi_action.report_form');
-				?>
+             
                 
                 
                 
@@ -199,10 +200,10 @@ foreach ($categories as $category)
 				<div class="report_row">
                 <h4>Map It</h4>
               	  	<div class="report-find-location">
-							<p>Click and drag the red marker to place it where you want.</p> <p>Click and drag map to move map. </p><p> Use <img src="http://pps.org/placemap/denver/themes/pps/images/plus.gif" / align="absmiddle" style="padding:2px;"> and <img src="http://pps.org/placemap/denver/themes/pps/images/minus.gif"  align="absmiddle" style="padding:2px;"/> icons to zoom map.</p><br /><p>If your idea is for an area, please select one example place.</p><p>Project ideas must be within the district area outlined.</p>
+							<p>Click and drag the red marker to place it where you want.</p> <p>Click and drag map to move map. </p><p> Use <img src="http://pps.org/placemap/denver/themes/pps/images/plus.gif" / align="absmiddle" style="padding:2px;"> and <img src="http://pps.org/placemap/denver/themes/pps/images/minus.gif"  align="absmiddle" style="padding:2px;"/> icons to zoom map.</p><br /><p>If your idea is for an area, please select one example place.</p>
                    	</div>
 					<div id="divMap" class="report_map"></div>
-                    <div style="clear:both;" id="find_text"><?php echo Kohana::lang('ui_main.pinpoint_location'); ?>.</div>
+                    <!--<div style="clear:both;" id="find_text"><?php echo Kohana::lang('ui_main.pinpoint_location'); ?>.</div>-->
 					
                    	</div>
 					<div class="report-find-location" style="display:none;">
@@ -212,13 +213,7 @@ foreach ($categories as $category)
 					
 				</div>
                 
-                <div class="report_row">
-						<h4><?php echo Kohana::lang('ui_main.reports_email'); ?><br />
-                        <span class="example">This will not be shown publicly
-                                                  <?php // echo Kohana::lang('ui_main.reports_email_privacy'); ?>
-</span></h4>
-						<?php print form::input('person_email', $form['person_email'], ' class="text long"'); ?>
-					</div>
+               
                 
               
                 
@@ -357,13 +352,23 @@ foreach ($categories as $category)
                                                   <h4>Your Neighborhood <span style="margin-left: 2em" class="discreet">Example: Alta Vista</span></h4>
                                                   <?php print form::input('person_neighborhood', $form['person_neighborhood'], ' class="text long"'); ?>
                                         </div>
+                                        
+                                        
                                         <?php endif; ?>
+                                         <div class="report_row">
+						<h4><?php echo Kohana::lang('ui_main.reports_email'); ?><br />
+                        <span class="example">This will not be shown publicly
+                                                  <?php // echo Kohana::lang('ui_main.reports_email_privacy'); ?>
+</span></h4>
+						<?php print form::input('person_email', $form['person_email'], ' class="text long"'); ?>
+					</div>
 					
 					<?php
 					// Action::report_form_optional - Runs in the optional information of the report form
 					Event::run('ushahidi_action.report_form_optional');
 					?>
 				</div>
+                
                 <div class="report_row">
                                         <img id="submit-spinner" style="display: none"
                                              src="<?php echo url::site('themes/pps/images/progress.gif'); ?>" />
@@ -371,14 +376,11 @@ foreach ($categories as $category)
 				</div>
 			</div>
 			<div class="report_right sidebar-copy">
-                         <br /><br /><br /><br /><br /><br /><br /><br />
-                          <h5>Participatory budgeting is a new and different way to make decisions about publicly funded projects in your neighborhood.</h5>
-                          <h5>Community members - like you - decide how to spend part of the public budget in your City Council district.</h5>
-                          <h5>Over $1 million is available for 
-<a class="photothumb" rel="lightbox-group1" href="/placemap/pbnyc/themes/pps/images/pbnyc_eligible-projects.jpg">"capital"</a> projects for your 
-district!</h5>
-                          <h5>Read more at <a href="http://pbnyc.org">PBNYC.org</a></h5><br /><br /><a class="photothumb" rel="lightbox-group1" href="/placemap/pbnyc/themes/pps/images/pbnyc_eligible-projects.jpg" target="_blank"><img style="border:2px #95CF1A solid; border-radius: 4px;" width="225px" src="/placemap/pbnyc/themes/pps/images/pbnyc_eligible-projects.jpg"/></a><br /><br />
-<img src="/placemap/pbnyc/themes/pps/images/pb-graphic.png" />
+                        
+                          <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+                          <h5>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </h5>
+                          <h5>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
+                         
 			</div>
 		</div>
 		<?php print form::close(); ?>

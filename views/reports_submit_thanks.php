@@ -14,7 +14,7 @@
 				<p style="font-size:14px">More ways to participate:<br />
 				  <ul><li> You can also <a href="../reports/submit">add another</a> idea</li>
                     <li>Comment on other ideas, check out the <a href="../main">map</a> or  <a href="../reports">list</a> of everyone's suggestions.</li></ul><br /> In the meantime, you can help spread the word by:
-                   <ul> <li>Sharing this via <span class='st_facebook_button' displayText='Facebook'></span> &  <span class='st_twitter_button' displayText='Tweet' st_url="http://ow.ly/7fogi" st_title="I just shared my idea for Participatory Budgeting NYC. What's yours?  #pbnyc"></span> to get your friends involved.</li>
+                   <ul> <li>Sharing this via <span class='st_facebook_button' displayText='Facebook'></span> &  <span class='st_twitter_button' displayText='Tweet' st_url="http://pps.org/placemap/pbnyc39/reports/submit" st_title="I just shared my idea ... What's yours?  #..."></span> to get your friends involved.</li>
                     </ul>
 </p>	
                 
