@@ -48,13 +48,13 @@
  
   <tr>
   <td valign="top" width="150px" style="padding-left:20px; padding-right:20px; padding-bottom:20px;">Created by<br />
-    <br /><a href="http://www.pps.org"><img style="margin-right:40px" src="/placemap/pbnyc8/themes/pps/images/PPS-logo.png" ></a></td>
-    <td valign="top" width="250px" style="padding-left:20px; padding-right:20px; padding-bottom:20px;">Sponsored by<br /><a href="http://www.spacescape.se"><img style="margin-right:40px" src="/placemap/goteborg/themes/pps/images/spacescape-logo.png"></a><a href="http://www.goteborg.se/wps/portal"><img style="margin-right:40px" src="/placemap/goteborg/themes/pps/images/goteborgs-stad-logo.png" ></a></td>
+    <br /><a href="http://www.pps.org"><img style="margin-right:40px" src="<?php echo url::site('themes/pps/images/PPS-logo.png'); ?>" ></a></td>
+    <td valign="top" width="250px" style="padding-left:20px; padding-right:20px; padding-bottom:20px;">Sponsored by<br /><a href="http://www.spacescape.se"><img style="margin-right:40px" src="<?php echo url::site('themes/pps/images/spacescape-logo.png') ?>"></a><a href="http://www.goteborg.se/wps/portal"><img style="margin-right:40px" src="<?php echo url::site('themes/pps/images/goteborgs-stad-logo.png'); ?>" ></a></td>
     
     
     <td valign="top" width="150px" style="padding-left:20px; padding-right:20px; padding-bottom:20px;">      		<p style="font-size:10px;">All content, unless otherwise noted, in this work by <a href="http://pps.org">Project for Public Spaces</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.<br /><br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a></p>
       	</td> <td valign="top" width="100px" style="padding-left:20px; padding-right:20px; padding-bottom:20px;">      		<p style="font-size:10px;">A <a href="https://github.com/projectforpublicspaces/Ushahidi_Web/tree/pps">PPS Ushahidi remix</a> licensed under <a href="http://www.gnu.org/copyleft/gpl.html">GPL3</a><br />
-      	  <br /><img style="margin-right:20px" src="/placemap/goteborg/themes/pps/images/osi_standard_logo.png" ></p>
+      	  <br /><img style="margin-right:20px" src="<?php echo url::site('themes/pps/images/osi_standard_logo.png'); ?>" ></p>
       	</td>
 
     
