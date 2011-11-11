@@ -427,6 +427,17 @@ Female <br />
 </span></h4>
 						<?php print form::input('person_email', $form['person_email'], ' class="text long"'); ?>
 					</div>
+
+                                        <div class="report_row">
+                                          <h4>Link for people to connect w/ you online (personal blog, twitter, etc.)</h4>
+                                          <?php echo form::input('person_connect_link', $form['person_connect_link'], 'class="text long"'); ?>
+                                        </div>
+
+                                        <div class="report_row">
+                                          <h4>Neighborhood</h4>
+                                          <?php echo form::input('person_neighborhood', $form['person_neighborhood'], 'class="text long"'); ?>
+                                        </div>
+
 					
 					<?php
 					// Action::report_form_optional - Runs in the optional information of the report form
