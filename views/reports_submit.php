@@ -1,10 +1,18 @@
 <?php
 
+function radio_button($name, $value) {
+  $checked = isset($_POST[$name]) && $_POST[$name] == $value;
+  return form::radio($name, $value, $checked);
+}
+
 function likert_radio_group($name, $responses) {
   $group = array();
   foreach ($responses as $response) {
-    $group[] = '<input type="radio" name="' . $name . '" value="' . $response->id . '" />' .
-      $response->response . '<br />';
+    $value = $response->id;
+    $checked = (isset($_POST[$name]) && $_POST[$name] == $value
+                ? 'checked="checked" '
+                : '');
+    $group[] = radio_button($name,  $value) . $response->response . '<br />';
   }
   return implode('', $group);
 }
@@ -27,6 +35,13 @@ function likert_questions($questions, $responses) {
   }
   $markup[] = '</ol>';
   return implode('', $markup);
+}
+
+function demographics_age_radio($age) {
+  $name = 'demographics_age';
+  $value = $age->id;
+  $label = $age->age_range;
+  return radio_button($name, $value) . $label;
 }
 
 ?>
@@ -246,12 +261,28 @@ foreach ($categories as $category)
 						<div id="find_loading" class="report-find-loading"></div>
 					
 				</div>
-                
-               
-                
-              
-                
-                
+
+<div id="demographics">
+<div class="report_row">
+<h4>Age</h4>
+<?php
+foreach ($demographics_ages as $age) {
+echo demographics_age_radio($age) . '<br />';
+}
+?>
+</div>
+<div class="report_row">
+<h4>Gender</h4>
+<?php echo radio_button('demographics_gender', 'male'); ?>
+Male <br />
+<?php echo radio_button('demographics_gender', 'female'); ?>
+Female <br />
+</div>
+<div class="report_row">
+<h4>Post Number</h4>
+<?php echo form::input('demographics_postnumber', $form['demographics_postnumber'], 'class="text long"'); ?>
+</div>
+</div>
 
 				<div class="report_optional">
 					<h4 style="font-size:150%; font-weight:bold; font-family: Helvetica, arial, serif;"><?php echo Kohana::lang('ui_main.reports_optional'); ?></h4><span class="subtext">
