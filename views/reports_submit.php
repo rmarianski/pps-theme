@@ -1,48 +1,5 @@
 <?php
 
-function radio_button($name, $value) {
-  $checked = isset($_POST[$name]) && $_POST[$name] == $value;
-  return form::radio($name, $value, $checked);
-}
-
-function likert_radio_group($name, $responses) {
-  $group = array();
-  foreach ($responses as $response) {
-    $value = $response->id;
-    $checked = (isset($_POST[$name]) && $_POST[$name] == $value
-                ? 'checked="checked" '
-                : '');
-    $group[] = radio_button($name,  $value) . $response->response . '<br />';
-  }
-  return implode('', $group);
-}
-
-function likert_question($question_label, $question_form_name, $responses) {
-  return '<li>' .
-    '<p>' . $question_label . '</p>' .
-    likert_radio_group($question_form_name, $responses) .
-    '</li>';
-}
-
-function likert_questions($questions, $responses) {
-  // function that displays all likert questions
-  $markup = array();
-  $markup[] = '<ol>';
-  foreach ($questions as $question) {
-    $label = $question->question;
-    $name = 'likert_question_' . $question->id;
-    $markup[] = likert_question($label, $name, $responses);
-  }
-  $markup[] = '</ol>';
-  return implode('', $markup);
-}
-
-function demographics_age_radio($age) {
-  $name = 'demographics_age';
-  $value = $age->id;
-  $label = $age->age_range;
-  return radio_button($name, $value) . $label;
-}
 
 ?>
 
@@ -120,7 +77,7 @@ foreach ($categories as $category)
 				</div>
 <div class="report_row" id="likert-questions">
 <h4>Rating Assessment</h4>
-<?php echo likert_questions($likert_questions, $likert_responses); ?>
+<?php echo reports::likert_questions($likert_questions, $likert_responses, $form); ?>
 </div>
 				<?php
 				
@@ -267,15 +224,15 @@ foreach ($categories as $category)
 <h4>Age</h4>
 <?php
 foreach ($demographics_ages as $age) {
-echo demographics_age_radio($age) . '<br />';
+echo reports::demographics_age_radio($age, $form) . '<br />';
 }
 ?>
 </div>
 <div class="report_row">
 <h4>Gender</h4>
-<?php echo radio_button('demographics_gender', 'male'); ?>
+<?php echo reports::radio_button('demographics_gender', 'male', $form); ?>
 Male <br />
-<?php echo radio_button('demographics_gender', 'female'); ?>
+<?php echo reports::radio_button('demographics_gender', 'female', $form); ?>
 Female <br />
 </div>
 <div class="report_row">
