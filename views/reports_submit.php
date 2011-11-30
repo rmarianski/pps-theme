@@ -236,8 +236,8 @@ Male <br />
 Female <br />
 </div>
 <div class="report_row">
-<h4>Post Number</h4>
-<?php echo form::input('demographics_postnumber', $form['demographics_postnumber'], 'class="text long"'); ?>
+<h4>District</h4>
+<?php echo reports::district_dropdown('demographics_district', $demographics_districts, $form); ?>
 </div>
 </div>
 
