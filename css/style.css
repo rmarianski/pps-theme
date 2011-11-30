@@ -105,7 +105,6 @@ div#header{
 	margin:35px auto 0 auto;
 	width: 925px;
     position: relative;
-    height: 165px;
 		-moz-border-top-radius:3px;
 	-khtml-border-top-radius:3px;
 	-webkit-border-top-radius:3px;
@@ -162,8 +161,9 @@ div#logo span{
 div#middle{
     width: auto;
     margin: 0px 0px 0px 0px;
-    clear: both;
+    clear: none;
 	background: transparent;
+	
 }
 
 div#middle .background{
