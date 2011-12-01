@@ -1839,8 +1839,12 @@ border: 0px #333 solid;
 	width: 550px;
 }
 
-#likert-questions li {
-margin: 0.5em 0;
+#likert-questions img {
+    margin-left: 350px;
+}
+
+#likert-questions td.question {
+    width: 350px;
 }
 
 /*---New Reports Styles CB:10.14.10 ---*/

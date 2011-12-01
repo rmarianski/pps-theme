@@ -77,6 +77,7 @@ foreach ($categories as $category)
 				</div>
 <div class="report_row" id="likert-questions">
 <h4>Din bedömning</h4>
+<img src="<?php echo url::site('themes/pps/images/likert.jpg'); ?>" />
 <?php echo reports::likert_questions($likert_questions, $likert_responses, $form); ?>
 </div>
 				<?php
