@@ -76,7 +76,7 @@ foreach ($categories as $category)
 					</div>
 				</div>
 <div class="report_row" id="likert-questions">
-<h4>Rating Assessment</h4>
+<h4>Din bedömning</h4>
 <?php echo reports::likert_questions($likert_questions, $likert_responses, $form); ?>
 </div>
 				<?php
@@ -87,11 +87,11 @@ foreach ($categories as $category)
 				<div class="report_row" >
 					<h4 style="font-size:30px"><?php echo Kohana::lang('ui_main.reports_title'); ?>
                    </h4>
-					<?php print form::textarea('incident_title', $form['incident_title'], ' rows="4" class="textarea long" placeholder="My idea for an opportunity to make this better..."'); ?>
+					<?php print form::textarea('incident_title', $form['incident_title'], ' rows="4" class="textarea long" placeholder="Vad jag gör här..."'); ?>
 				</div>
 				<div class="report_row">
 					<h4><?php echo Kohana::lang('ui_main.reports_description'); ?></h4>
-					<?php print form::textarea('incident_description', $form['incident_description'], ' rows="4" class="textarea long" placeholder="...explain why your idea is good for people..."  ') ?>
+					<?php print form::textarea('incident_description', $form['incident_description'], ' rows="4" class="textarea long" placeholder="...t.e.x. fler sittplatser eller grönska..."  ') ?>
 				</div>
                
 				<div class="report_row" style="display:none" id="datetime_default">
@@ -204,9 +204,9 @@ foreach ($categories as $category)
 					 }
 				?>
 				<div class="report_row">
-                <h4>Map It</h4>
+                <h4>Markera platsen på kartan</h4>
               	  	<div class="report-find-location">
-							<p>Click and drag the red marker to place it where you want.</p> <p>Click and drag map to move map. </p><p> Use <img src="http://pps.org/placemap/denver/themes/pps/images/plus.gif" / align="absmiddle" style="padding:2px;"> and <img src="http://pps.org/placemap/denver/themes/pps/images/minus.gif"  align="absmiddle" style="padding:2px;"/> icons to zoom map.</p><br /><p>If your idea is for an area, please select one example place.</p>
+							<p>Dra den röda markören till platsen.</p> <p>Klicka och dra kartan om du vill flytta den.</p><p> Använd <img src="http://pps.org/placemap/denver/themes/pps/images/plus.gif" / align="absmiddle" style="padding:2px;"> <img src="http://pps.org/placemap/denver/themes/pps/images/minus.gif"  align="absmiddle" style="padding:2px;"/> ikonerna för att zooma in eller ut.</p><br /><p>Om din tanke berör en gata eller ett område, välj en plats i mitten av denna.</p>
                    	</div>
 					<div id="divMap" class="report_map"></div>
                     <!--<div style="clear:both;" id="find_text"><?php echo Kohana::lang('ui_main.pinpoint_location'); ?>.</div>-->
@@ -221,7 +221,7 @@ foreach ($categories as $category)
 
 <div id="demographics">
 <div class="report_row">
-<h4>Age</h4>
+<h4>Ålder</h4>
 <?php
 foreach ($demographics_ages as $age) {
 echo reports::demographics_age_radio($age, $form) . '<br />';
@@ -229,14 +229,14 @@ echo reports::demographics_age_radio($age, $form) . '<br />';
 ?>
 </div>
 <div class="report_row">
-<h4>Gender</h4>
+<h4>Kön</h4>
 <?php echo reports::radio_button('demographics_gender', 'male', $form); ?>
 Male <br />
 <?php echo reports::radio_button('demographics_gender', 'female', $form); ?>
 Female <br />
 </div>
 <div class="report_row">
-<h4>District</h4>
+<h4>I vilken stadsdel bor du?</h4>
 <?php echo reports::district_dropdown('demographics_district', $demographics_districts, $form); ?>
 </div>
 </div>
@@ -322,7 +322,7 @@ Female <br />
 				<!-- Photo Fields -->
 				<div id="divPhoto"  class="report_row">
                                     <h4><?php echo Kohana::lang('ui_main.reports_photos'); ?>
-                                    <span class="discreet" style="margin: 0 0 0 2em">jpg, gif, or png up to 2 megabytes</span>
+                                    <span class="discreet" style="margin: 0 0 0 2em">jpg, gif eller png upp till 2 megabyte</span>
                                     </h4>
 					<?php
 						$this_div = "divPhoto";
@@ -379,18 +379,18 @@ Female <br />
                                         <?php endif; ?>
                                          <div class="report_row">
 						<h4><?php echo Kohana::lang('ui_main.reports_email'); ?><br />
-                        <span class="example">This will not be shown publicly
+                        <span class="example">Din e-post kommer inte att visas offentligt men kan användas för att meddela dig när din idé är publicerad på hemsidan.
                                                   <?php // echo Kohana::lang('ui_main.reports_email_privacy'); ?>
 </span></h4>
 						<?php print form::input('person_email', $form['person_email'], ' class="text long"'); ?>
 					</div>
 
                                         <div class="report_row">
-                                          <h4>Link for people to connect w/ you online (personal blog, twitter, etc.)</h4>
+                                          <h4>Länk till dig på nätet (personlig blogg, Twitter etc)</h4>
                                           <?php echo form::input('person_connect_link', $form['person_connect_link'], 'class="text long"'); ?>
                                         </div>
 
-                                        <div class="report_row">
+                                        <div class="report_row" style="display:none;">
                                           <h4>Neighborhood</h4>
                                           <?php echo form::input('person_neighborhood', $form['person_neighborhood'], 'class="text long"'); ?>
                                         </div>
@@ -402,17 +402,18 @@ Female <br />
 					?>
 				</div>
                 
-                <div class="report_row">
+                <div class="report_row" style="text-align:center;">
                                         <img id="submit-spinner" style="display: none"
                                              src="<?php echo url::site('themes/pps/images/progress.gif'); ?>" />
-					<input name="submit" type="submit" value="<?php echo Kohana::lang('ui_main.reports_btn_submit'); ?>" class="btn_submit" /> 
+					<input name="submit" type="submit" value="<?php echo Kohana::lang('ui_main.reports_btn_submit'); ?>" class="btn_submit" /> <br />
+                    <a class="photothumb" rel="lightbox-group1" href="/placemap/goteborg/themes/pps/images/regler.jpg" style="font-size:12px;">Allmänna regler</a>
 				</div>
 			</div>
 			<div class="report_right sidebar-copy">
-                        
-                          <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
-                          <h5>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </h5>
-                          <h5>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
+                       <h5>Hej! Kul att du kom hit. Vi på Stadsbyggnadskontoret, Trafikkontoret och Centrala Älvstaden i Göteborgs stad vill med den här webbsidan undersöka kvaliteter och brister med offentliga platser i centrala Göteborg. Syftet är att få mer kunskap om hur platser i centrala staden används, upplevs och vilka kvaliteter som efterfrågas av göteborgarna själva. Här kan du också ta del av andras inlägg och kommentera dessa.</h5>
+ 
+ <h5>Webbsidan kommer att vara öppen t.o.m den 12 februari 2012. Som hjälp i detta arbete har kommunen anlitat de svenska konsultföretagen Spacescape och Trivector samt organisationen Project for Public Space från New york.</h5>
+ <h5><a href="/placemap/goteborg/reports/submit">Mer om Stadslivsanalysen</a></h5>
                          
 			</div>
 		</div>
@@ -426,7 +427,7 @@ Female <br />
       var options = {
           allowed: 200,
           warning: 20,
-          counterText: "Characters left: ",
+          counterText: "Tecken kvar: ",
           counterElement: 'p'
       };
       $('#incident_title').charCount(options);
