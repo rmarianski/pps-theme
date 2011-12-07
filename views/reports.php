@@ -18,7 +18,7 @@ if (!empty($category_titles))
 </h1>
 <form method="GET" action="<?php echo url::site('reports'); ?>">
 <ul>
-<span style="font-weight: bold; display:">Filter by</span>
+<span style="font-weight: bold; display:">Välj mellan</span>
 <?php
 
 foreach ($all_categories as $visible_category)
@@ -27,12 +27,12 @@ foreach ($all_categories as $visible_category)
   }
 ?>
 
-<span style="font-weight: bold; margin-left: 1em">Sort on</span>
+<span style="font-weight: bold; margin-left: 1em">Sortera på</span>
 <select name="sort">
-   <option value="date">Date</option>
-   <option value="comments" <?php if (isset($_GET['sort']) AND $_GET['sort'] == "comments"): ?>selected="true"<?php endif; ?>>Comments</option>
+   <option value="date">Datum</option>
+   <option value="comments" <?php if (isset($_GET['sort']) AND $_GET['sort'] == "comments"): ?>selected="true"<?php endif; ?>>Kommentarer</option>
 </select>
-<input type="submit" value="Apply" />
+<input type="submit" value="Visa" />
 </ul>
 </form>
 			<div style="clear:both;"></div>

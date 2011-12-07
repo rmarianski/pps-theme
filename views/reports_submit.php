@@ -16,7 +16,7 @@
 			?>
 			<!-- red-box -->
 			<div class="red-box">
-				<h3>Error!</h3>
+				<h3>Fel!</h3>
 				<ul>
 					<?php
 						foreach ($errors as $error_item => $error_description)
@@ -77,7 +77,7 @@ foreach ($categories as $category)
 				</div>
 <div class="report_row" id="likert-questions">
 <h4>Din bedömning</h4>
-<img src="<?php echo url::site('themes/pps/images/likert.jpg'); ?>" />
+<img src="<?php echo url::site('themes/pps/images/likert.png'); ?>" />
 <?php echo reports::likert_questions($likert_questions, $likert_responses, $form); ?>
 </div>
 				<?php
@@ -86,13 +86,13 @@ foreach ($categories as $category)
 				Event::run('ushahidi_action.report_form');
 				?>
 				<div class="report_row" >
-					<h4 style="font-size:30px"><?php echo Kohana::lang('ui_main.reports_title'); ?>
+					<h4><?php echo Kohana::lang('ui_main.reports_title'); ?>
                    </h4>
-					<?php print form::textarea('incident_title', $form['incident_title'], ' rows="4" class="textarea long" placeholder="Vad jag gör här..."'); ?>
+					<?php print form::textarea('incident_title', $form['incident_title'], ' rows="4" class="textarea long" placeholder="...t.e.x. fler sittplatser eller grönska..."'); ?>
 				</div>
 				<div class="report_row">
 					<h4><?php echo Kohana::lang('ui_main.reports_description'); ?></h4>
-					<?php print form::textarea('incident_description', $form['incident_description'], ' rows="4" class="textarea long" placeholder="...t.e.x. fler sittplatser eller grönska..."  ') ?>
+					<?php print form::textarea('incident_description', $form['incident_description'], ' rows="4" class="textarea long" placeholder="förklara varför ditt förslag är bra för de som använder platsen... vad du gör här eller vad du skulle vilja göra här."  ') ?>
 				</div>
                
 				<div class="report_row" style="display:none" id="datetime_default">
@@ -232,9 +232,9 @@ echo reports::demographics_age_radio($age, $form) . '<br />';
 <div class="report_row">
 <h4>Kön</h4>
 <?php echo reports::radio_button('demographics_gender', 'male', $form); ?>
-Male <br />
+Man <br />
 <?php echo reports::radio_button('demographics_gender', 'female', $form); ?>
-Female <br />
+Kvinna <br />
 </div>
 <div class="report_row">
 <h4>I vilken stadsdel bor du?</h4>
@@ -414,7 +414,6 @@ Female <br />
                        <h5>Hej! Kul att du kom hit. Vi på Stadsbyggnadskontoret, Trafikkontoret och Centrala Älvstaden i Göteborgs stad vill med den här webbsidan undersöka kvaliteter och brister med offentliga platser i centrala Göteborg. Syftet är att få mer kunskap om hur platser i centrala staden används, upplevs och vilka kvaliteter som efterfrågas av göteborgarna själva. Här kan du också ta del av andras inlägg och kommentera dessa.</h5>
  
  <h5>Webbsidan kommer att vara öppen t.o.m den 12 februari 2012. Som hjälp i detta arbete har kommunen anlitat de svenska konsultföretagen Spacescape och Trivector samt organisationen Project for Public Space från New york.</h5>
- <h5><a href="/placemap/goteborg/reports/submit">Mer om Stadslivsanalysen</a></h5>
                          
 			</div>
 		</div>

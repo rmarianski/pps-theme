@@ -20,7 +20,7 @@
 			
             
 <?php if (false): ?>
-<span>Submitted by:
+<span>Inskickat av:
 <?php echo ($submitted_first_name || $submitted_last_name) ? $submitted_first_name." ".$submitted_last_name." " : "Anonymous " ?>
 <?php if ($submitted_neighborhood): ?>
 in <?php echo $submitted_neighborhood; ?>
@@ -31,7 +31,7 @@ in <?php echo $submitted_neighborhood; ?>
         
         <!-- end submitby / date -->
         <!-- start twitter/facebook -->
-			<div class="report-news"><h4>Spread This Idea</h4></div>
+			<div class="report-news"><h4>Sprid denna idé</h4></div>
 			<div class="report-category-list">
 <!--
 				<table class="rating-table" cellspacing="0" cellpadding="0" border="0">
@@ -43,14 +43,14 @@ in <?php echo $submitted_neighborhood; ?>
             <td><a href="" id="oloader_<?php echo $incident_id; ?>" class="rating_loading" ></a></td>
           </tr>
         </table>-->
-<span style="padding-right:10px;" class='st_twitter_vcount' displayText='Tweet' st_url="<?php echo urlencode(url::base() . url::current()) ?>" st_title="Interesting capital project idea for Participatory Budgeting in #NYC District 39. #pbnyc"> </span>
+<span style="padding-right:10px;" class='st_twitter_vcount' displayText='Tweet' st_url="<?php echo urlencode(url::base() . url::current()) ?>" st_title="Vilken är den bästa eller sämsta platsen i centrala Göteborg? Lägg till din egna! #StadslivGöteborg"> </span>
 <iframe src="http://www.facebook.com/plugins/like.php?href=<?php echo urlencode(url::base() . url::current()) ?>&amp;layout=standard&amp;show_faces=true&amp;width=292&amp;action=like&amp;font&amp;colorscheme=light&amp;height=55" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:55px;" allowTransparency="true"></iframe>
 			</div>
             <!-- end twitter/facebook -->
         
         <!-- start questions/responses -->
-      <h4 class="report-title">Where</h4><h6><?php echo $incident_location; ?></h6>
-	<h3 class="report-title"><?php echo Kohana::lang('ui_main.reports_title');?></h3> <h6><?php
+      <h4 class="report-title">Platsen</h4><h6><?php echo $incident_location; ?></h6>
+	<h4 class="report-title"><?php echo Kohana::lang('ui_main.reports_title');?></h4> <h6><?php
 			echo $incident_title;
 			
 			// If Admin is Logged In - Allow For Edit Link
@@ -94,7 +94,7 @@ if (isset($disp_custom_fields[$custom_fieldid]) AND !empty($disp_custom_fields[$
 			<!-- end images -->
            
 			<!-- start category list -->
-		<div class="report-news"><h4>Categories</h4></div>
+		<div class="report-news"><h4>Kategorier</h4></div>
         	<div class="report-category-list">
 		<p>
 			<?php
@@ -186,10 +186,10 @@ if (isset($disp_custom_fields[$custom_fieldid]) AND !empty($disp_custom_fields[$
 			<div id="report-map" class="report-map">
 				<div class="map-holder" id="map"></div>
         <ul class="map-toggles">
-          <li><a href="#" class="smaller-map">Smaller map</a></li>
-          <li style="display:block;"><a href="#" class="wider-map">Wider map</a></li>
-          <li><a href="#" class="taller-map">Taller map</a></li>
-          <li><a href="#" class="shorter-map">Shorter Map</a></li>
+          <li><a href="#" class="smaller-map">Mindre karta</a></li>
+          <li style="display:block;"><a href="#" class="wider-map">Vidare karta</a></li>
+          <li><a href="#" class="taller-map">Större karta</a></li>
+          <li><a href="#" class="shorter-map">Mindre karta</a></li>
         </ul>
         <div style="clear:both"></div>
 			</div>

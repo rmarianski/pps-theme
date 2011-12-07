@@ -14,7 +14,7 @@
 				<p style="font-size:14px">Fler sätt att delta:<br />
 				  <ul><li>Du kan berätta hur du upplever ytterligare en plats och <a href="../reports/submit">föreslå förbättringar</a></li>
                     <li>Kommentera andras idéer, kolla in <a href="../main">idékartan</a> eller <a href="../reports">idélistan</a>.</li></ul><br /> Under tiden kan du hjälpa till att sprida sidan genom att:
-                   <ul><li>Dela den här på <span class='st_facebook_button' displayText='Facebook'></span> eller  <span class='st_twitter_button' displayText='Tweet' st_url="http://pps.org/placemap/pbnyc39/reports/submit" st_title="I just shared my idea ... What's yours?  #..."></span> för att få dina vänner att tycka till om staden.</li>
+                   <ul><li>Dela den här på <span class='st_facebook_button' displayText='Facebook'></span> eller  <span class='st_twitter_button' displayText='Tweet' st_url="<?php echo urlencode(url::base() . url::current()) ?>" st_title="Vilken är den bästa eller sämsta platsen i centrala Göteborg? Kolla dessa platser och lägg till din egna!"></span> för att få dina vänner att tycka till om staden.</li>
                    <li>Blogga om denna enkät</li>
 <li>Be en vän skicka sina idéer och få dem publicerade</li>
                     </ul>

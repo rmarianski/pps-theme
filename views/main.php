@@ -209,6 +209,7 @@ echo '<li><a href="#" id="cat_'. $child .'"><span '.$color_css.'>'.$child_image.
 				echo $div_timeline;
 				?>
 			</div>
+             <div class="map-meta"><p><a title="kml" href="http://pps.org/placemap/goteborg/kml">KML</a></p></div>
 		</div>
 		<!-- / content column -->
 

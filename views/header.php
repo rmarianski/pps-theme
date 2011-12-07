@@ -15,10 +15,10 @@
 	?>
     <script type="text/javascript" src="http://pps.org/placemap/sanantonio/media/js/picbox.js"></script>
 <script type="text/javascript" src="http://pps.org/placemap/sanantonio/media/js/coda-slider.pack.js"></script>
-<meta property="og:title" content="Lorem Ipsum" />
+<meta property="og:title" content="Bästa Platsen!" />
 <meta property="og:type" content="website" />
 <?php if (!isset($og_description) OR !$og_description): ?>
-<?php $og_description = "Lorem Ipsum"; ?>
+<?php $og_description = "Hjälp oss hitta det bästa och sämsta med centrala Göteborgs platser"; ?>
 <?php endif; ?>
 <meta property="og:description" content="<?php echo $og_description; ?>" />
 <meta property="og:url" content="<?php echo url::base() . url::current() ?>" /> 
@@ -52,7 +52,7 @@
 			<!-- searchbox -->
 			<div id="searchbox" style="float:left;">
             
-           <span class='st_twitter_button' displayText='Tweet' st_url="http://pps.org/placemap/goteborg/reports/submit" st_title="Lorem Ipsum"></span><span class='st_email_button' displayText='Email'></span><span class='st_facebook_button' displayText='Facebook'></span><span class='st_sharethis_button' displayText='ShareThis'></span><br /><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fpps.org%2Fplacemap%2Fgoteborg%2Freports%2Fsubmit&amp;send=false&amp;layout=box_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=90" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:90px; padding-top:30px" allowTransparency="true"></iframe>
+           <span class='st_twitter_button' displayText='Tweet' st_url="http://pps.org/placemap/goteborg/reports/submit" st_title="Hjälp oss hitta det bästa och sämsta med centrala Göteborgs platser. #StadslivGöteborg"></span><span class='st_email_button' displayText='Email'></span><span class='st_facebook_button' displayText='Facebook'></span><span class='st_sharethis_button' displayText='ShareThis'></span><br /><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fpps.org%2Fplacemap%2Fgoteborg%2Freports%2Fsubmit&amp;send=false&amp;layout=box_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=90" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:90px; padding-top:30px" allowTransparency="true"></iframe>
 				<!-- languages -->
    <?php // echo $languages;?>
 				<!-- / languages -->
