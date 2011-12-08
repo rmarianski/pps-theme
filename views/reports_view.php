@@ -18,16 +18,23 @@
     <!-- start submitby / date -->
 <p class="report-when-where">
 			
-            
-<?php if (false): ?>
-<span>Submitted by:
-<?php echo ($submitted_first_name || $submitted_last_name) ? $submitted_first_name." ".$submitted_last_name." " : "Anonymous " ?>
-<?php if ($submitted_neighborhood): ?>
-in <?php echo $submitted_neighborhood; ?>
-<?php endif; ?>
-<?php endif; ?>
-</span><span class="r_date"><?php echo $incident_time.' '.$incident_date; ?> </span>
-		</p>
+Submitted by:
+<?php
+if ($incident_person && ($incident_person->person_first || $incident_person->person_last)) {
+  if ($incident_person->person_connect_link) {
+    echo '<a href="' . $incident_person->person_connect_link . '">';
+  }
+  echo $incident_person->person_first . ' ' . $incident_person->person_last;
+  if ($incident_person->person_connect_link) {
+    echo '</a>';
+  }
+} else {
+  echo 'Anonymous';
+}
+?>
+
+<span class="r_date"><?php echo $incident_time.' '.$incident_date; ?> </span>
+</p>
         
         <!-- end submitby / date -->
         <!-- start twitter/facebook -->
