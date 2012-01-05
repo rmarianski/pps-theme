@@ -137,7 +137,7 @@ foreach ($all_categories as $visible_category)
 							<h3 class="r_title"><a class="r_title" href="<?php echo url::site(); ?>reports/view/<?php echo $incident_id; ?>"><?php echo $incident_title; ?></a> <a href="<?php echo url::site(); ?>reports/view/<?php echo $incident_id; ?>#discussion" class="r_comments"><?php echo $comment_count; ?></a> <?php echo $incident_verified; ?></h3>
 							<p class="r_date r-3 bottom-cap"><?php echo $incident_date; ?></p>
 							<div class="r_description" style="display:none"> <?php echo $incident_description; ?> </div>
-							<h3 class="r_title">Var <b style="font-weight:normal"><?php echo $location_name; ?></b></h3>
+							<h3 class="r_title">Var? <b style="font-weight:normal"><?php echo $location_name; ?></b></h3>
 <?php if (isset($person_submitted_info[$incident->incident_id])) {
 $person_info = $person_submitted_info[$incident->incident_id];
 if ($person_info['first_name'] || $person_info['last_name']) { ?>
