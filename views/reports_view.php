@@ -31,7 +31,7 @@ if ($incident_person && ($incident_person->person_first || $incident_person->per
   echo 'Anonymous';
 }
 ?>
-<span class="r_date"><?php echo $incident_time.' '.$incident_date; ?> </span>
+<span class="r_date"><?php echo $incident_time.' '.reports::translate_date($incident_date); ?> </span>
 </p>
         
         <!-- end submitby / date -->
@@ -215,7 +215,7 @@ if (isset($disp_custom_fields[$custom_fieldid]) AND !empty($disp_custom_fields[$
 			<?php foreach($incident_neighbors as $neighbor) { ?>
 			  <div class="rb_report">
   			  <h5><a href="<?php echo url::site(); ?>reports/view/<?php echo $neighbor->id; ?>"><?php echo $neighbor->incident_title; ?></a></h5>
-  			  <p class="r_date r-3 bottom-cap"><?php echo date('g:ia M d, Y', strtotime($neighbor->incident_dateadd)); ?></p>
+  			  <p class="r_date r-3 bottom-cap"><?php echo reports::translate_date(date('g:ia M d, Y', strtotime($neighbor->incident_dateadd))); ?></p>
   			  <p class="r_location"><?php echo $neighbor->location_name.", ".round($neighbor->distance, 2); ?> Kms</p>
   			</div>
       <?php } ?>
