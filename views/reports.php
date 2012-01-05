@@ -27,7 +27,7 @@ foreach ($all_categories as $visible_category)
   }
 ?>
 
-<span style="font-weight: bold; margin-left: 1em">Sortera på</span>
+<br /><span style="font-weight: bold;">Sortera på</span>
 <select name="sort">
    <option value="date">Datum</option>
    <option value="comments" <?php if (isset($_GET['sort']) AND $_GET['sort'] == "comments"): ?>selected="true"<?php endif; ?>>Kommentarer</option>

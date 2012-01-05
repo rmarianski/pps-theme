@@ -105,11 +105,11 @@ div#header{
 	margin:35px auto 0 auto;
 	width: 925px;
     position: relative;
-		-moz-border-top-radius:3px;
-	-khtml-border-top-radius:3px;
-	-webkit-border-top-radius:3px;
-	border-top-left-radius:3px;
-	border-top-right-radius:3px;
+		-moz-border-top-radius:8px;
+	-khtml-border-top-radius:8px;
+	-webkit-border-top-radius:8px;
+	border-top-left-radius:8px;
+	border-top-right-radius:8px;
 }
 
 div#header a span {
@@ -140,13 +140,14 @@ div#logo h1{
       1px 0 #333, 0 -1px #333;*/
 	/*text-transform:uppercase;*/
 	width: 550px;
+	display:none;
 	
 }  
 
 div#logo h2{
 	color: #222;
 	font-weight:normal;
-	margin:0 0 0 0px;
+	margin:90px 0 0 0px;
 	font-size: 21px;
 	font-family: 'Ubuntu', sans-serif;
 	/*text-shadow: -1px 0 #333, 0 1px #333,
@@ -249,11 +250,11 @@ div#footer{
     padding-bottom: 0px;
 	border-top:1px dotted #00AEEF;
 	background: transparent url(../images/opacity-white.png) center top repeat;
-		-moz-border-bottom-radius:3px;
-	-khtml-border-bottom-radius:3px;
-	-webkit-border-bottom-radius:3px;
-	border-bottom-left-radius:3px;
-	border-bottom-right-radius:3px;
+		-moz-border-bottom-radius:8px;
+	-khtml-border-bottom-radius:8px;
+	-webkit-border-bottom-radius:8px;
+	border-bottom-left-radius:8px;
+	border-bottom-right-radius:8px;
 	margin:0 auto 35px auto;
 	width: 925px;
 }
@@ -286,7 +287,8 @@ div#underfooter{
 }
 
 /* searchbox */
-div#searchbox{
+div#searchbox {
+	width: 300px;
     position: absolute;
 	text-align:right;
     top: 0px;
@@ -296,7 +298,6 @@ div#searchbox{
     border: #9F9F9F 0px solid;
     border-top: 0;
     height: 45px;
-	
 }
 
 /* languages */
@@ -1507,8 +1508,9 @@ label.error {
 }
 
 .report_right.sidebar-copy h5 {
-    font-size: 1em;
-    font-weight: bold;
+   font-size: 14px;
+font-weight: normal;
+line-height: 1.2em;
 }
 
 
@@ -1866,8 +1868,8 @@ border: 0px #333 solid;
 			span.r_cat-desc { display:none; }
 			
 			.r_cat_tooltip { display:none;  position:absolute; z-index:1000; background:transparent url(../images/tooltip-arrow.png) 8px bottom no-repeat; padding:0 0 6px; }
-			.r_cat_tooltip a { background:#282828; display:inline-block; padding:3px 8px; color: #222; text-transform:uppercase; font-size:12px; }
-			.r_cat_tooltip a:hover { text-decoration:none; color: #222; }
+			.r_cat_tooltip a { background:#282828; display:inline-block; padding:3px 8px; color: #fff; text-transform:uppercase; font-size:12px; }
+			.r_cat_tooltip a:hover { text-decoration:none; color: #fff; }
 		
 		.r_details { float:left; width:720px; margin:15px 0; }
 			.r_details h3 { font-size:16px; margin-bottom:0px; width:670px;  font-family: 'Ubuntu', sans-serif;}

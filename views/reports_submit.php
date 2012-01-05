@@ -411,9 +411,7 @@ Kvinna <br />
 				</div>
 			</div>
 			<div class="report_right sidebar-copy">
-                       <h5>Hej! Kul att du kom hit. Vi på Stadsbyggnadskontoret, Trafikkontoret och Centrala Älvstaden i Göteborgs stad vill med den här webbsidan undersöka kvaliteter och brister med offentliga platser i centrala Göteborg. Syftet är att få mer kunskap om hur platser i centrala staden används, upplevs och vilka kvaliteter som efterfrågas av göteborgarna själva. Här kan du också ta del av andras inlägg och kommentera dessa.</h5>
- 
- <h5>Webbsidan kommer att vara öppen t.o.m den 12 februari 2012. Som hjälp i detta arbete har kommunen anlitat de svenska konsultföretagen Spacescape och Trivector samt organisationen Project for Public Space från New york.</h5>
+                       <h5>Vilka platser i centrala Göteborg tycker du om? Vilka tycker du inte om? Vi vill veta vad du tycker, och varför du tycker som du gör. Därför genomför Göteborgs Stad en undersökning för att kunna utveckla offentliga platser i centrum. Det vi vill veta är vilka platser som används och vilka kvaliteter och brister som finns där. Du kan också ta del av andras inlägg och kommentera dem.</h5><h5>Resultatet av undersökningen kommer att användas i en Stadslivsanalys som håller på att tas fram av Stadsbyggnadskontoret, Trafikkontoret och Centrala Älvstaden. "Bästa platsen" kommer att finnas fram t.o.m. 12 februari.</h5>
                          
 			</div>
 		</div>

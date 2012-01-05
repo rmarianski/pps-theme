@@ -52,7 +52,14 @@
 			<!-- searchbox -->
 			<div id="searchbox" style="float:left;">
             
-           <span class='st_twitter_button' displayText='Tweet' st_url="http://pps.org/placemap/goteborg/reports/submit" st_title="Hjälp oss hitta det bästa och sämsta med centrala Göteborgs platser. #StadslivGöteborg"></span><span class='st_email_button' displayText='Email'></span><span class='st_facebook_button' displayText='Facebook'></span><span class='st_sharethis_button' displayText='ShareThis'></span><br /><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fpps.org%2Fplacemap%2Fgoteborg%2Freports%2Fsubmit&amp;send=false&amp;layout=box_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=90" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:90px; padding-top:30px" allowTransparency="true"></iframe>
+         <!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style " addthis:url="http://bit.ly/z6oMPi" addthis:title="Hjälp oss hitta det bästa och sämsta med centrala Göteborgs platser. #StadslivGöteborg">
+<a class="addthis_button_tweet" tw:via=""></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4dcac49b08b3e729"></script>
+<!-- AddThis Button END --><br /><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fpps.org%2Fplacemap%2Fgoteborg%2Freports%2Fsubmit&amp;send=false&amp;layout=box_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=90" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:90px; padding-top:30px" allowTransparency="true"></iframe>
 				<!-- languages -->
    <?php // echo $languages;?>
 				<!-- / languages -->
