@@ -88,11 +88,11 @@ foreach ($categories as $category)
 				<div class="report_row" >
 					<h4><?php echo Kohana::lang('ui_main.reports_title'); ?>
                    </h4>
-					<?php print form::textarea('incident_title', $form['incident_title'], ' rows="4" class="textarea long" placeholder="...t.e.x. fler sittplatser eller grönska..."'); ?>
+					<?php print form::textarea('incident_title', $form['incident_title'], ' rows="3" class="textarea long" placeholder="...t.e.x. fler sittplatser eller grönska..."'); ?>
 				</div>
 				<div class="report_row">
 					<h4><?php echo Kohana::lang('ui_main.reports_description'); ?></h4>
-					<?php print form::textarea('incident_description', $form['incident_description'], ' rows="4" class="textarea long" placeholder="förklara varför ditt förslag är bra för de som använder platsen... vad du gör här eller vad du skulle vilja göra här."  ') ?>
+					<?php print form::textarea('incident_description', $form['incident_description'], ' rows="3" class="textarea long" placeholder="förklara varför ditt förslag är bra för de som använder platsen... vad du gör här eller vad du skulle vilja göra här."  ') ?>
 				</div>
                
 				<div class="report_row" style="display:none" id="datetime_default">
