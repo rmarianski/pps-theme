@@ -415,6 +415,7 @@ Kvinna <br />
                          
 			</div>
 		</div>
+                                                  <input id="pinmoved" type="hidden" name="pinmoved" value="<?php echo $form['pinmoved']; ?>" />
 		<?php print form::close(); ?>
 		<!-- end report form block -->
 	</div>
