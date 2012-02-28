@@ -228,6 +228,11 @@ foreach ($categories as $category)
 					
 				</div>
 
+<div class="report_row">
+<h4>I vilken stadsdel bor du?</h4>
+<?php echo reports::district_dropdown('demographics_district', $demographics_districts, $form); ?>
+</div>
+
 <div id="demographics">
 <div class="report_row">
 <h4>Ålder</h4>
@@ -243,10 +248,6 @@ echo reports::demographics_age_radio($age, $form) . '<br />';
 Man <br />
 <?php echo reports::radio_button('demographics_gender', 'female', $form); ?>
 Kvinna <br />
-</div>
-<div class="report_row">
-<h4>I vilken stadsdel bor du?</h4>
-<?php echo reports::district_dropdown('demographics_district', $demographics_districts, $form); ?>
 </div>
 </div>
 
