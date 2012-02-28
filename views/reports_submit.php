@@ -88,11 +88,11 @@ foreach ($categories as $category)
 				<div class="report_row" >
 					<h4><?php echo Kohana::lang('ui_main.reports_title'); ?>
                    </h4>
-					<?php print form::textarea('incident_title', $form['incident_title'], ' rows="3" class="textarea long" placeholder="...t.e.x. fler sittplatser eller grönska..."'); ?>
+					<?php print form::textarea('incident_title', $form['incident_title'], ' rows="3" class="textarea long" placeholder="tex. fler sittplatser..."'); ?>
 				</div>
 				<div class="report_row">
 					<h4><?php echo Kohana::lang('ui_main.reports_description'); ?></h4>
-					<?php print form::textarea('incident_description', $form['incident_description'], ' rows="3" class="textarea long" placeholder="förklara varför ditt förslag är bra för de som använder platsen... vad du gör här eller vad du skulle vilja göra här."  ') ?>
+					<?php print form::textarea('incident_description', $form['incident_description'], ' rows="3" class="textarea long" placeholder="beskriv en positiv utveckling"  ') ?>
 				</div>
                
 				<div class="report_row" style="display:none" id="datetime_default">
@@ -323,7 +323,7 @@ Kvinna <br />
 				<!-- Photo Fields -->
 				<div id="divPhoto"  class="report_row">
                                     <h4><?php echo Kohana::lang('ui_main.reports_photos'); ?>
-                                    <span class="discreet" style="margin: 0 0 0 2em">jpg, gif eller png upp till 2 megabyte</span>
+                                    <span class="discreet" style="margin: 0 0 0 2em">jpg, gif eller png upp till 2 mb</span>
                                     </h4>
 					<?php
 						$this_div = "divPhoto";
@@ -407,11 +407,15 @@ Kvinna <br />
                                         <img id="submit-spinner" style="display: none"
                                              src="<?php echo url::site('themes/pps/images/progress.gif'); ?>" />
 					<input name="submit" type="submit" value="<?php echo Kohana::lang('ui_main.reports_btn_submit'); ?>" class="btn_submit" /> <br />
-                    <a class="photothumb" rel="lightbox-group1" href="/placemap/goteborg/themes/pps/images/regler.jpg" style="font-size:12px;">Allmänna regler</a>
+                    <a class="photothumb" rel="lightbox-group1" href="/placemap/goteborg/themes/pps/images/regler.jpg" style="font-size:12px;">Jag accepterar dessa publiceringsregler </a>
 				</div>
 			</div>
 			<div class="report_right sidebar-copy">
-                       <h5>Vilka platser i centrala Göteborg tycker du om? Vilka tycker du inte om? Vi vill veta vad du tycker, och varför du tycker som du gör. Därför genomför Göteborgs Stad en undersökning för att kunna utveckla offentliga platser i centrum. Det vi vill veta är vilka platser som används och vilka kvaliteter och brister som finns där. Du kan också ta del av andras inlägg och kommentera dem.</h5><h5>Resultatet av undersökningen kommer att användas i en Stadslivsanalys som håller på att tas fram av Stadsbyggnadskontoret, Trafikkontoret och Centrala Älvstaden. "Bästa platsen" kommer att finnas fram t.o.m. 12 februari.</h5>
+                       <h5>Hej! I Lidingö stad vill med den här webbsidan lära oss mer om hur Lidingöborna upplever Lidingö Centrum-Torsvik. Syftet är att inför planeringen av området få mer kunskap om hur olika platser används, upplevs och vilka kvaliteter som efterfrågas av Lidingöborna själva. Här kan du också ta del av andras inlägg och kommentera dessa.</h5>
+ 
+<h5>Webbsidan kommer att vara öppen t.o.m. 13 april. Som hjälp i detta arbete har kommunen anlitat konsultföretaget Spacescape och organisationen Project for Public Spaces.</h5>
+ 
+<h5><a href="http://www.lidingo.se/toppmeny/byggabomiljo/utvecklingochplanering/centrumtorsvik.4.6c15e7f1343e395c86800013.html">Mer om planarbetet med Centrum Torsvik</a></h5>
                          
 			</div>
 		</div>

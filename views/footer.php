@@ -47,7 +47,7 @@
        <table border="0">
  
   <tr>
-  <td valign="top" width="250px" style="padding-left:20px; padding-right:20px; padding-bottom:20px;"><br /><a href="http://www.goteborg.se/wps/portal"><img style="margin-right:40px" src="<?php echo url::site('themes/pps/images/goteborgs-stad-logo.png'); ?>" ></a></td>
+  <td valign="top" width="250px" style="padding-left:20px; padding-right:20px; padding-bottom:20px;"><br /><a href="http://www.lidingo.se/toppmeny/byggabomiljo/utvecklingochplanering/centrumtorsvik.4.6c15e7f1343e395c86800013.html"><img style="margin-right:40px" src="<?php echo url::site('themes/pps/images/lidingo-logotype.png'); ?>" ></a></td>
   <td valign="top" width="150px" style="padding-left:20px; padding-right:20px; padding-bottom:20px;">Websidan är producerad av:<br />
     <br /><a href="http://www.pps.org"><img style="margin-right:40px" src="<?php echo url::site('themes/pps/images/PPS-logo.png'); ?>" ></a><br /><a href="http://www.spacescape.se"><img style="margin-right:40px" src="<?php echo url::site('themes/pps/images/spacescape-logo.png') ?>"></a></td>
     

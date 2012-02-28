@@ -48,7 +48,7 @@ if ($incident_person && ($incident_person->person_first || $incident_person->per
             <td><a href="" id="oloader_<?php echo $incident_id; ?>" class="rating_loading" ></a></td>
           </tr>
         </table>-->
-<span style="padding-right:10px;" class='st_twitter_vcount' displayText='Tweet' st_url="<?php echo urlencode(url::base() . url::current()) ?>" st_title="Vilken är den bästa eller sämsta platsen i centrala Göteborg? Lägg till din egna! #StadslivGöteborg"> </span>
+<span style="padding-right:10px;" class='st_twitter_vcount' displayText='Tweet' st_url="<?php echo urlencode(url::base() . url::current()) ?>" st_title="Hjälp oss hitta kvaliteter och brister i centrala Lidingö. #lidingocentrumtorsvik"> </span>
 <iframe src="http://www.facebook.com/plugins/like.php?href=<?php echo urlencode(url::base() . url::current()) ?>&amp;layout=standard&amp;show_faces=true&amp;width=292&amp;action=like&amp;font&amp;colorscheme=light&amp;height=55" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:55px;" allowTransparency="true"></iframe>
 			</div>
             <!-- end twitter/facebook -->

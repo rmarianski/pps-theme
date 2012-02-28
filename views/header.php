@@ -18,7 +18,7 @@
 <meta property="og:title" content="Bästa Platsen!" />
 <meta property="og:type" content="website" />
 <?php if (!isset($og_description) OR !$og_description): ?>
-<?php $og_description = "Hjälp oss hitta det bästa och sämsta med centrala Göteborgs platser"; ?>
+<?php $og_description = "Hjälp oss hitta kvaliteter och brister i centrala Lidingö"; ?>
 <?php endif; ?>
 <meta property="og:description" content="<?php echo $og_description; ?>" />
 <meta property="og:url" content="<?php echo url::base() . url::current() ?>" /> 
@@ -53,13 +53,13 @@
 			<div id="searchbox" style="float:left;">
             
          <!-- AddThis Button BEGIN -->
-<div class="addthis_toolbox addthis_default_style " addthis:url="http://bit.ly/z6oMPi" addthis:title="Hjälp oss hitta det bästa och sämsta med centrala Göteborgs platser. #StadslivGöteborg">
+<div class="addthis_toolbox addthis_default_style " addthis:url="http://bit.ly/yWgE28" addthis:title="Hjälp oss hitta kvaliteter och brister i centrala Lidingö. #lidingocentrumtorsvik">
 <a class="addthis_button_tweet" tw:via=""></a>
 <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
 <a class="addthis_counter addthis_pill_style"></a>
 </div>
 <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4dcac49b08b3e729"></script>
-<!-- AddThis Button END --><br /><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fpps.org%2Fplacemap%2Fgoteborg%2Freports%2Fsubmit&amp;send=false&amp;layout=box_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=90" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:90px; padding-top:30px" allowTransparency="true"></iframe>
+<!-- AddThis Button END --><br /><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fpps.org%2Fplacemap%2Flidingo%2Freports%2Fsubmit&amp;send=false&amp;layout=box_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=90" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:90px; padding-top:30px" allowTransparency="true"></iframe>
 				<!-- languages -->
    <?php // echo $languages;?>
 				<!-- / languages -->
