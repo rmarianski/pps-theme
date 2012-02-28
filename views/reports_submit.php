@@ -80,6 +80,10 @@ foreach ($categories as $category)
 <img src="<?php echo url::site('themes/pps/images/likert.png'); ?>" />
 <?php echo reports::likert_questions($likert_questions, $likert_responses, $form); ?>
 </div>
+<div class="report_row">
+<h4>Berätta mer om varför du gillar/ogillar platsen...</h4>
+<?php echo form::textarea('beratta', $form['beratta'], ' rows="3" class="textarea long" placeholder="Vad du gör här..."  ') ?>
+</div>
 				<?php
 				
 				// Action::report_form - Runs right after the report categories
@@ -90,6 +94,10 @@ foreach ($categories as $category)
                    </h4>
 					<?php print form::textarea('incident_title', $form['incident_title'], ' rows="3" class="textarea long" placeholder="tex. fler sittplatser..."'); ?>
 				</div>
+<div class="report_row">
+<h4>Detta vill jag inte ska hända...</h4>
+<?php echo form::textarea('detta', $form['detta'], ' rows="3" class="textarea long" placeholder="beskriv det som oroar dig inför en förändring..."'); ?>
+</div>
 				<div class="report_row">
 					<h4><?php echo Kohana::lang('ui_main.reports_description'); ?></h4>
 					<?php print form::textarea('incident_description', $form['incident_description'], ' rows="3" class="textarea long" placeholder="beskriv en positiv utveckling"  ') ?>
